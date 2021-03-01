@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Staircase</title>
+    <style>
+        .staircase {
+            padding: 20px;
+        }
+        input {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <input type="text" placeholder="Enter Number of Steps:">
+        <input type="button" value="Draw Staircase!" onclick="staircase()">
+        <input type="button" value="Clear!" onclick="refreshPage()">
+    </div>
+    <div align="center">
+        <img src="sun.png" width="150px" height="150px">
+    </div>
+    <div class="staircase" align="center">
+        <div id="step">
+        </div>
+    </div>
+    <script>
+        function staircase() {
+            var n = Number(document.querySelector("input").value);
+            var w = 50;
+            for (let i = 0; i < n; i++) {
+                var stair = document.createElement("div");
+                stair.style.width = w + "px";
+                w = w + 50;
+                stair.style.height = "50px";
+                stair.style.border = "1px solid white"
+                stair.style.backgroundColor = "#ec407a";
+                document.getElementById("step").appendChild(stair);
+            }
+        }
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

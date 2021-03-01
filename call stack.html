@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+        debugger;
+        function display() {
+            let ans = sum(10, getNumber());
+            alert(ans);
+            return sum;
+        }
+        function getNumber() {
+            return prompt("Enter a number");
+        }
+        function sum(a, b) {
+            return add(a++, ++b);
+        }
+        function add(p, q) {
+            return 1 + p + q;
+        }
+        let a = display()(1, 3);
+        console.log(a);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Generate Table</title>
+    <style type="text/css">
+        body {
+            margin: 50px;
+            padding: 20px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable" border="1">
+    </table>
+    <form>
+        <input type="button" onclick="createTable()" value="Create the table">
+    </form>
+    <script>
+        function createTable() {
+            rn = window.prompt("Input number of rows", 1);
+            cn = window.prompt("Input number of columns", 1);
+            for (var i = 0; i < parseInt(rn, 10); i++) {
+                var x = document.getElementById('myTable').insertRow(i);
+                for (var y = 0; y < parseInt(cn, 10); y++) {
+                    var z = x.insertCell(y);
+                    z.innerHTML = "" + i + "" + y;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

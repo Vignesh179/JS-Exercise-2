@@ -1,0 +1,12 @@
+<script>
+    var arr = [];
+    var i;
+    for (i = 0; i < 5; i++) {
+        arr.push(Number(prompt("Enter your Marks")));
+    }
+    var r = arr.reduce(myFunction);
+    function myFunction(a, b) {
+        return a + b;
+    }
+    document.write("The sum of Array is "+r);
+</script>

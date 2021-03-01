@@ -1,0 +1,9 @@
+<script>
+    var arr = [9, 5, 3, 2, 8, 9,9];
+    var m = Math.max(...arr);
+    var c = arr.reduce(myFunction, 0);
+    function myFunction(count, v) {
+        return count + (v === m);
+    }
+    document.write(c);
+</script>
